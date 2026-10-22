@@ -4,14 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+        <link rel="stylesheet" href="src/styles.css">
     <title>Document</title>
 </head>
 
 <body>
     <div class="calculator">
         <div class="calculator-header">
-            <div id="box-theme">
-
+            <div class="box-theme">
+                <button class="toggle-theme"><i class="fa-solid  fa-sun"></i></button>
             </div>
 
             <div class="box-display">
@@ -22,24 +32,26 @@
 
         <div class="calculator-body">
             <button>AC</button>
-            <button>%</button>
-            <button>/</button>
-            <button>del</button>
+            <button><i class="fa-solid fa-percent"></i></button>
+            <button><i class="fa-solid fa-divide"></i></button>
+            <button><i class="fa-solid fa-delete-left"></i></button>
             <button>7</button>
             <button>8</button>
             <button>9</button>
-            <button>*</button>
+            <button><i class="fa-solid fa-xmark"></i></button>
             <button>4</button>
             <button>5</button>
             <button>6</button>
-            <button>-</button>
+            <button><i class="fa-solid fa-minus"></i></button>
             <button>1</button>
             <button>2</button>
             <button>3</button>
-            <button>+</button>
-            <button>0</button>
-            <button>.</button>
-            <button>=</button>
+            <button><i class="fa-solid fa-plus" ></i></button>
+            <button class="btn-zero">0</button>
+            <button>
+                <i class="fa-solid fa-circle" id="circle"></i>
+            </button>
+            <button><i class="fa-solid fa-equals"></i></button>
         </div>
     </div>
 
