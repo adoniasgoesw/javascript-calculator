@@ -9,12 +9,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
+    width: 100vw;
 
-    min-height: 100vh;
-    min-height: 100dvh;
-
-    width: 100%;
-    padding: 12px;
 }
 
 .calculator {
@@ -43,9 +40,8 @@ body {
     left: 50%;
     transform: translateX(-50%);
 
-    width: min(300px, 100%);
-height: min(590px, calc(100dvh - 24px));
-flex-shrink: 0;
+    width: 140px;
+    height: 25px;
 
     background-color: #353535;
     border-radius: 0 0 18px 18px;
@@ -82,13 +78,9 @@ flex-shrink: 0;
 .calculator-header {
     background-color: white;
     width: 100%;
-
-    flex: 0 0 35%;
-    min-height: 0;
-
+    height: 340px;
     border-radius: 0 0 50px 50px;
-    padding: 30px 24px 12px;
-
+    padding: 30px;
     display: flex;
     flex-direction: column;
 }
@@ -96,12 +88,12 @@ flex-shrink: 0;
 
 
 .calculator-header .box-theme {
+    
     width: 100%;
     height: 20px;
-    flex-shrink: 0;
-
     display: flex;
-    justify-content: flex-end;
+    justify-content: end;
+    box-sizing: border-box;
 }
 
 .calculator-header .box-theme button {
@@ -120,16 +112,16 @@ flex-shrink: 0;
 
 
 .calculator-header .box-display {
+    
     width: 100%;
-    flex: 1;
-    min-height: 0;
-
+    height: 100%;
     display: flex;
+    justify-content: end;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+    align-items: end;
+    padding: 20px 0;
 
-    padding: 8px 0;
+   
 }
 
 .calculator-header .box-display input {
@@ -148,18 +140,15 @@ flex-shrink: 0;
 
 
 .calculator-body {
-    flex: 1;
-    min-height: 0;
-
+    height: 100%;
     background-color: transparent;
     display: grid;
-
     padding: 16px;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: repeat(5, minmax(0, 1fr));
-
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     gap: 5px;
     width: 100%;
+    box-sizing: border-box;
     margin-bottom: 10px;
 }
 
@@ -168,7 +157,6 @@ flex-shrink: 0;
     border-radius: 25px;
     border: none;
     cursor: pointer;
-    color: #353535;
 
     transition: transform 0.15s ease;
 }
