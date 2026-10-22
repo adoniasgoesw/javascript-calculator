@@ -85,6 +85,12 @@ body {
     flex-direction: column;
 }
 
+@media screen and (max-width: 600px) {
+    .calculator-header {
+        height: 220px;
+    }
+}
+
 
 
 .calculator-header .box-theme {
@@ -157,6 +163,7 @@ body {
     border-radius: 25px;
     border: none;
     cursor: pointer;
+    color: #353535;
 
     transition: transform 0.15s ease;
 }
