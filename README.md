@@ -2,6 +2,10 @@
 
 A basic calculator project built with HTML, CSS, and vanilla JavaScript to practice functions and programming logic.
 
+## Preview
+
+![Calculator with an iPhone-inspired design](./assets/calculator-preview.png)
+
 ## Project Goal
 
 Build a calculator step by step, understanding how to organize functions, handle user input, and connect JavaScript logic to a web interface.
