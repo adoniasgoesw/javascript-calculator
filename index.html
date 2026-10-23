@@ -22,40 +22,129 @@
     <div class="calculator">
         <div class="calculator-header">
             <div class="box-theme">
-                <button class="toggle-theme"><i class="fa-solid  fa-sun"></i></button>
+                <button
+                    type="button"
+                    id="toggle-theme"
+                    aria-label="Alternar tema"
+                >
+                    <i class="fa-solid fa-sun" aria-hidden="true"></i>
+                </button>
             </div>
 
             <div class="box-display">
-                <input type="text" value="122" disabled id="result">
-                <input type="text" disabled value="122 + 10 - 10" id="display">
+                <input
+                    type="text"
+                    id="history"
+                    value=""
+                    readonly
+                    aria-label="Última operação"
+                >
+
+                <input
+                    type="text"
+                    id="display"
+                    value="0"
+                    readonly
+                    aria-label="Visor da calculadora"
+                >
             </div>
         </div>
 
         <div class="calculator-body">
-            <button>AC</button>
-            <button><i class="fa-solid fa-percent"></i></button>
-            <button><i class="fa-solid fa-divide"></i></button>
-            <button><i class="fa-solid fa-delete-left"></i></button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button><i class="fa-solid fa-xmark"></i></button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button><i class="fa-solid fa-minus"></i></button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button><i class="fa-solid fa-plus" ></i></button>
-            <button class="btn-zero">0</button>
-            <button>
-                <i class="fa-solid fa-circle" id="circle"></i>
+            <!-- Primeira linha -->
+            <button type="button" onclick="clearDisplay()">
+                AC
             </button>
-            <button><i class="fa-solid fa-equals"></i></button>
+
+            <button
+                type="button"
+                onclick="insertToDisplay('/')"
+                aria-label="Dividir"
+            >
+                <i class="fa-solid fa-divide" aria-hidden="true"></i>
+            </button>
+
+            <button
+                type="button"
+                onclick="insertToDisplay('*')"
+                aria-label="Multiplicar"
+            >
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            </button>
+
+            <button
+                type="button"
+                onclick="deleteDisplay()"
+                aria-label="Apagar último caractere"
+            >
+                <i class="fa-solid fa-delete-left" aria-hidden="true"></i>
+            </button>
+
+            <!-- Segunda linha -->
+            <button type="button" onclick="insertToDisplay('7')">7</button>
+            <button type="button" onclick="insertToDisplay('8')">8</button>
+            <button type="button" onclick="insertToDisplay('9')">9</button>
+
+            <button
+                type="button"
+                onclick="insertToDisplay('-')"
+                aria-label="Subtrair"
+            >
+                <i class="fa-solid fa-minus" aria-hidden="true"></i>
+            </button>
+
+            <!-- Terceira linha -->
+            <button type="button" onclick="insertToDisplay('4')">4</button>
+            <button type="button" onclick="insertToDisplay('5')">5</button>
+            <button type="button" onclick="insertToDisplay('6')">6</button>
+
+            <button
+                type="button"
+                onclick="insertToDisplay('+')"
+                aria-label="Somar"
+            >
+                <i class="fa-solid fa-plus" aria-hidden="true"></i>
+            </button>
+
+            <!-- Quarta linha -->
+            <button type="button" onclick="insertToDisplay('1')">1</button>
+            <button type="button" onclick="insertToDisplay('2')">2</button>
+            <button type="button" onclick="insertToDisplay('3')">3</button>
+
+            <!-- Quarta e quinta linhas -->
+            <button
+                type="button"
+                id="btn-equals"
+                onclick="result()"
+                aria-label="Calcular resultado"
+            >
+                <i class="fa-solid fa-equals" aria-hidden="true"></i>
+            </button>
+
+            <!-- Quinta linha -->
+            <button
+                type="button"
+                class="btn-zero"
+                onclick="insertToDisplay('0')"
+            >
+                0
+            </button>
+
+            <button
+                type="button"
+                onclick="insertToDisplay('.')"
+                aria-label="Ponto decimal"
+            >
+                <i
+                    class="fa-solid fa-circle"
+                    id="circle"
+                    aria-hidden="true"
+                ></i>
+            </button>
         </div>
     </div>
 
+    
 </body>
-
+<script src="scripts/scritp.js"></script>
 </html>
